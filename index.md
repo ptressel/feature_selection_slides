@@ -1,0 +1,60 @@
+---
+title       : Are you smarter than a. . .
+subtitle    : . . .machine learning feature selection algorithm?
+author      : Patricia Tressel
+job         : Class project for Developing Data Products
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Why try feature selection?
+
+- Feature selection is:
+  - Picking predictors to use for machine learning prediction
+  - The least advanced part of machine learning
+  - Still dependent on human assistance, e.g. domain knowledge
+- But it's important:
+  - Unneeded features slow down classifier training
+  - Junk features can facilitate overfitting
+
+---
+
+## Try doing it yourself!
+
+- This app lets you:
+  - Compare features and outcome in a dataset
+  - Select features, train the classifier, see the accuracy
+  - Try to get the highest accuracy with fewest features
+- Would you keep both these features? Hmm...
+
+![plot of chunk feature_plot](assets/fig/feature_plot-1.png) 
+
+---
+
+## Behind the scenes
+
+- What is the app doing?
+  - Uses the South Africa heart disease dataset
+    from the R [ElemStatLearn package](http://www.inside-r.org/packages/cran/ElemStatLearn)
+  - Trains a support vector machine with polynomial kernel
+    from the R [kernlab package](http://www.inside-r.org/packages/cran/kernlab)
+  - Shows cross-validation accuracy
+- Ready to play?
+  - [Try it out](https://ptressel.shinyapps.io/feature_selection_app)
+
+---
+
+## More...
+
+- To explore feature selection
+  - Excellent (if dated) [review](http://www.jmlr.org/papers/volume3/guyon03a/guyon03a.pdf)
+  - Recent high-level [overview](http://machinelearningmastery.com/an-introduction-to-feature-selection/)
+  - What's [available in the R caret package](http://machinelearningmastery.com/feature-selection-with-the-caret-r-package/)
+- How can the app be improved?
+  - Add other dataset and classifier options
+  - Include automated feature selection for comparison
+  - Post suggestions at the [Github repository](https://github.com/ptressel/feature_selection_app)!
