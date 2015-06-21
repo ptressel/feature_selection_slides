@@ -60,6 +60,12 @@
 <li>Unneeded features slow down classifier training</li>
 <li>Junk features can facilitate overfitting</li>
 </ul></li>
+<li>And hard (literally -- it&#39;s intractable):
+
+<ul>
+<li>On a dataset with \(N\) features, finding the best means checking \(2^N\) combinations</li>
+<li>The most useful features may depend on the specific classifier</li>
+</ul></li>
 </ul>
 
   </article>
@@ -102,6 +108,13 @@ from the R <a href="http://www.inside-r.org/packages/cran/ElemStatLearn">ElemSta
 <li>Trains a support vector machine with polynomial kernel
 from the R <a href="http://www.inside-r.org/packages/cran/kernlab">kernlab package</a></li>
 <li>Shows cross-validation accuracy</li>
+</ul></li>
+<li>This is a tricky dataset for feature selection
+
+<ul>
+<li>No clear un-useful features</li>
+<li>Small dataset size</li>
+<li>Few features are highly correlated</li>
 </ul></li>
 <li>Ready to play?
 
@@ -178,7 +191,21 @@ from the R <a href="http://www.inside-r.org/packages/cran/kernlab">kernlab packa
 </body>
   <!-- Load Javascripts for Widgets -->
   
-  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
   <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <!-- DONE LOADING HIGHLIGHTER JS FILES -->

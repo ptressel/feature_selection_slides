@@ -6,7 +6,7 @@ job         : Class project for Developing Data Products
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : []            # {mathjax, quiz, bootstrap}
+widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
@@ -20,6 +20,9 @@ knit        : slidify::knit2slides
 - But it's important:
   - Unneeded features slow down classifier training
   - Junk features can facilitate overfitting
+- And hard (literally -- it's intractable):
+  - On a dataset with $N$ features, finding the best means checking $2^N$ combinations
+  - The most useful features may depend on the specific classifier
 
 ---
 
@@ -53,6 +56,10 @@ text(xmid, ytop, sprintf("Correlation = %.3f", c))
   - Trains a support vector machine with polynomial kernel
     from the R [kernlab package](http://www.inside-r.org/packages/cran/kernlab)
   - Shows cross-validation accuracy
+- This is a tricky dataset for feature selection
+  - No clear un-useful features
+  - Small dataset size
+  - Few features are highly correlated
 - Ready to play?
   - [Try it out](https://ptressel.shinyapps.io/feature_selection_app)
 
